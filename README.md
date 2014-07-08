@@ -28,7 +28,22 @@ as of 7/8/2014
 192.168.104.12  node2-priv
 ```
 
-## Prepare
+## Download
+
+Download the Grid Infrastructure / Database binary form below.  Unzip to the subdirectory name "grid" and "database".
+
+https://updates.oracle.com/download/13390677.html
+
+Platform or Language -> Linux x86-64
+
+* into "database" subdirectory
+  * p13390677_112040_LINUX_1of7.zip
+  * p13390677_112040_LINUX_2of7.zip
+
+* into "grid" subdirectory
+  * p13390677_112040_LINUX_3of7.zip
+
+## Install OS
 
 If you are behing a proxy, install vagrant-proxyconf.
 
@@ -50,7 +65,7 @@ Install VirtualBox plugin.
 $ vagrant plugin install vagrant-vbguest
 ```
 
-Clone this repository to the local directory.
+Clone this repository to the local directory.  Move the "grid" and "database" directories to the same folder.
 
 ```
 $ git clone https://github.com/yasushiyy/vagrant-oracle11g-rac
@@ -64,19 +79,6 @@ config.proxy.http     = "http://proxy:port"
 config.proxy.https    = "http://proxy:port"
 config.proxy.no_proxy = "localhost,127.0.0.1"
 ```
-
-Download the Grid Infrastructure / Database binary form below.  Unzip to the same directory as above.  It should have the subdirectory name "grid" and "database".
-
-https://updates.oracle.com/download/13390677.html
-
-Platform or Language -> Linux x86-64
-
-* into "database" subdirectory
-  * p13390677_112040_LINUX_1of7.zip
-  * p13390677_112040_LINUX_2of7.zip
-
-* into "grid" subdirectory
-  * p13390677_112040_LINUX_3of7.zip
 
 Boot.  This might take a long time.
 

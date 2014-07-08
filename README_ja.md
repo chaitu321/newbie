@@ -3,20 +3,20 @@ vagrant-oracle11g-rac
 
 [English version here](README.md)
 
-[‚±‚ê](https://github.com/yasushiyy/vagrant-oracle12c-rac) ‚Ì11gR2”ÅB
+[ã“ã‚Œ](https://github.com/yasushiyy/vagrant-oracle12c-rac) ã®11gR2ç‰ˆã€‚
 
-11.2.0.4(PSR)‚ğ’¼ÚƒCƒ“ƒXƒg[ƒ‹‚·‚é‚Ì‚ÅAMy Oracle Support‚ÌƒAƒJƒEƒ“ƒg‚ª•K—vB11.2.0.1(DVD)‚Å‚àè‡‚Í‘å·–³‚¢‚Í‚¸B
+11.2.0.4(PSR)ã‚’ç›´æ¥ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã®ã§ã€My Oracle Supportã®ã‚¢ã‚«ã‚¦ãƒ³ãƒˆãŒå¿…è¦ã€‚11.2.0.1(DVD)ã§ã‚‚æ‰‹é †ã¯å¤§å·®ç„¡ã„ã¯ãšã€‚
 
 as of 7/8/2014
 
-## ŠT—v
+## æ¦‚è¦
 
 * node1, node2
-  * Oracle Linux 6.5 (CentOS6.5‚©‚ç•ÏŠ·‚µ‚Ä‚¢‚é)
+  * Oracle Linux 6.5 (CentOS6.5ã‹ã‚‰å¤‰æ›ã—ã¦ã„ã‚‹)
   * oracle-rdbms-server-11gR2-preinstall
   * Unbreakable Enterprise Kernel
-  * Memory: 2GB‚¸‚Â
-  * Shared Disk: 10GB (ASM—p)
+  * Memory: 2GBãšã¤
+  * Shared Disk: 10GB (ASMç”¨)
 
 ```
 192.168.103.11  node1
@@ -28,9 +28,24 @@ as of 7/8/2014
 192.168.104.12  node2-priv
 ```
 
-## €”õ
+## ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
 
-ƒvƒƒLƒV‚ğ—˜—p‚·‚é•K—v‚ª‚ ‚éê‡A‚Ü‚¸ vagrant-proxyconf ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+Grid Infrastructure / Database ã®ãƒã‚¤ãƒŠãƒªã‚’ä»¥ä¸‹ã‹ã‚‰ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã€‚"grid"ã¨"database"ã¨ã„ã†ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãªã‚‹ã¯ãšã€‚
+
+https://updates.oracle.com/download/13390677.html
+
+Platform or Language â†’ Linux x86-64
+
+* "database" ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+  * p13390677_112040_LINUX_1of7.zip
+  * p13390677_112040_LINUX_2of7.zip
+
+* "grid" ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+  * p13390677_112040_LINUX_3of7.zip
+
+## OSã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+
+ãƒ—ãƒ­ã‚­ã‚·ã‚’åˆ©ç”¨ã™ã‚‹å¿…è¦ãŒã‚ã‚‹å ´åˆã€ã¾ãš vagrant-proxyconf ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã€‚
 
 ```
 (MacOSX)
@@ -44,20 +59,20 @@ $ set https_proxy=proxy:port
 $ vagrant plugin install vagrant-proxyconf
 ```
 
-VirtualBox plugin ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+VirtualBox plugin ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã€‚
 
 ```
 $ vagrant plugin install vagrant-vbguest
 ```
 
-–{ƒŒƒ|ƒWƒgƒŠ‚ğƒ[ƒJƒ‹ƒfƒBƒXƒNã‚Éclone‚·‚éB
+æœ¬ãƒ¬ãƒã‚¸ãƒˆãƒªã‚’ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‡ã‚£ã‚¹ã‚¯ä¸Šã«cloneã™ã‚‹ã€‚å…ˆã»ã©ã®"grid"ã¨"oracle"ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æœ¬ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå†…ã«MOVEã™ã‚‹ã€‚
 
 ```
 $ git clone https://github.com/yasushiyy/vagrant-oracle11g-rac
 $ cd vagrant-oracle11g-rac
 ```
 
-ƒvƒƒLƒV‚ğ—˜—p‚·‚é•K—v‚ª‚ ‚éê‡A’Ç‰Á‚Å Vagrantfile ‚Ì•ÒW‚ª•K—vB
+ãƒ—ãƒ­ã‚­ã‚·ã‚’åˆ©ç”¨ã™ã‚‹å¿…è¦ãŒã‚ã‚‹å ´åˆã€è¿½åŠ ã§ Vagrantfile ã®ç·¨é›†ãŒå¿…è¦ã€‚
 
 ```
 config.proxy.http     = "http://proxy:port"
@@ -65,34 +80,21 @@ config.proxy.https    = "http://proxy:port"
 config.proxy.no_proxy = "localhost,127.0.0.1"
 ```
 
-Grid Infrastructure / Database ‚ÌƒoƒCƒiƒŠ‚ğˆÈ‰º‚©‚çƒ_ƒEƒ“ƒ[ƒhBã‹L Vagrantfile “™‚Æ“¯‚¶ƒfƒBƒŒƒNƒgƒŠ‚É‰ğ“€‚·‚éB"grid"‚Æ"database"‚Æ‚¢‚¤ƒTƒuƒfƒBƒŒƒNƒgƒŠ‚É‚È‚é‚Í‚¸B
-
-https://updates.oracle.com/download/13390677.html
-
-Platform or Language ¨ Linux x86-64
-
-* "database" ƒTƒuƒfƒBƒŒƒNƒgƒŠ
-  * p13390677_112040_LINUX_1of7.zip
-  * p13390677_112040_LINUX_2of7.zip
-
-* "grid" ƒTƒuƒfƒBƒŒƒNƒgƒŠ
-  * p13390677_112040_LINUX_3of7.zip
-
-‹N“®‚·‚éBVagrantfile, setup.sh‚Ì“à—e‚ªÀs‚³‚ê‚é‚Ì‚ÅA‚»‚±‚»‚±ŠÔ‚ª‚©‚©‚éB
+èµ·å‹•ã™ã‚‹ã€‚Vagrantfile, setup.shã®å†…å®¹ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã®ã§ã€ãã“ãã“æ™‚é–“ãŒã‹ã‹ã‚‹ã€‚
 
 ```
 $ vagrant up
 ```
 
-ƒŠƒu[ƒg‚·‚éBUEK kernel‚É’u‚«Š·‚í‚éBiŒ»“_‚Å‚ÍUEKR2‚ğ—˜—p‚µ‚Ä‚¨‚èAUEKR3‚Å‚Í‚È‚¢j
+ãƒªãƒ–ãƒ¼ãƒˆã™ã‚‹ã€‚UEK kernelã«ç½®ãæ›ã‚ã‚‹ã€‚ï¼ˆç¾æ™‚ç‚¹ã§ã¯UEKR2ã‚’åˆ©ç”¨ã—ã¦ãŠã‚Šã€UEKR3ã§ã¯ãªã„ï¼‰
 
 ```
 $ vagrant reload
 ```
 
-## GIƒCƒ“ƒXƒg[ƒ‹igridƒ†[ƒUj
+## GIã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ï¼ˆgridãƒ¦ãƒ¼ã‚¶ï¼‰
 
-ƒNƒ‰ƒXƒ^ƒEƒFƒA‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+ã‚¯ãƒ©ã‚¹ã‚¿ã‚¦ã‚§ã‚¢ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã€‚
 
 ```
 [vagrant@node1 ~]$ sudo su - grid
@@ -110,7 +112,7 @@ the follwing WARNING can be ignored:
 Successfully Setup Software.
 ```
 
-rootŒn‚ÌƒVƒFƒ‹‚ğÀs‚·‚éBƒpƒXƒ[ƒh‚ğ•·‚©‚ê‚½ê‡‚ÍA"vagrant"‚Æ“ü—Í‚·‚éB
+rootç³»ã®ã‚·ã‚§ãƒ«ã‚’å®Ÿè¡Œã™ã‚‹ã€‚ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’èã‹ã‚ŒãŸå ´åˆã¯ã€"vagrant"ã¨å…¥åŠ›ã™ã‚‹ã€‚
 
 ```
 [grid@node1 ~]$ ssh root@node1 /u01/oraInventory/orainstRoot.sh
@@ -120,7 +122,7 @@ rootŒn‚ÌƒVƒFƒ‹‚ğÀs‚·‚éBƒpƒXƒ[ƒh‚ğ•·‚©‚ê‚½ê‡‚ÍA"vagrant"‚Æ“ü—Í‚·‚éB
 [grid@node1 ~]$ /u01/11.2.0.4/grid/cfgtoollogs/configToolAllCommands RESPONSE_FILE=/vagrant/grid_install.rsp
 ```
 
-ƒZƒbƒgƒAƒbƒvó‹µ‚ğŠm”F‚·‚éB
+ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—çŠ¶æ³ã‚’ç¢ºèªã™ã‚‹ã€‚
 
 ```
 [grid@node1 ~]$ crsctl stat res -t
@@ -171,9 +173,9 @@ State    Type    Rebal  Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_
 MOUNTED  EXTERN  N         512   4096  1048576     10240     9844                0            9844              0             Y  DATA/
 ```
 
-## DBƒCƒ“ƒXƒg[ƒ‹ioracleƒ†[ƒUj
+## DBã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ï¼ˆoracleãƒ¦ãƒ¼ã‚¶ï¼‰
 
-ƒf[ƒ^ƒx[ƒX‚ÌƒoƒCƒiƒŠ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒã‚¤ãƒŠãƒªã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã€‚
 
 ```
 [grid@node1 ~]$ exit
@@ -190,23 +192,23 @@ the follwing WARNING can be ignored:
 Successfully Setup Software.
 ```
 
-rootŒn‚ÌƒVƒFƒ‹‚ğÀs‚·‚éBƒpƒXƒ[ƒh‚ğ•·‚©‚ê‚½ê‡‚ÍA"vagrant"‚Æ“ü—Í‚·‚éB
+rootç³»ã®ã‚·ã‚§ãƒ«ã‚’å®Ÿè¡Œã™ã‚‹ã€‚ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’èã‹ã‚ŒãŸå ´åˆã¯ã€"vagrant"ã¨å…¥åŠ›ã™ã‚‹ã€‚
 
 ```
 [oracle@node1 ~]$ ssh root@node1 /u01/oracle/product/11.2.0.4/dbhome_1/root.sh
 [oracle@node1 ~]$ ssh root@node2 /u01/oracle/product/11.2.0.4/dbhome_1/root.sh
 ```
 
-ƒZƒbƒgƒAƒbƒvó‹µ‚ğŠm”F‚·‚éB
+ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—çŠ¶æ³ã‚’ç¢ºèªã™ã‚‹ã€‚
 
 ```
 [oracle@node1 ~]$ which sqlplus
 /u01/oracle/product/11.2.0.4/dbhome_1/bin/sqlplus
 ```
 
-## DBì¬ioracleƒ†[ƒUj
+## DBä½œæˆï¼ˆoracleãƒ¦ãƒ¼ã‚¶ï¼‰
 
-DB‚ğì¬‚·‚éB
+DBã‚’ä½œæˆã™ã‚‹ã€‚
 
 ```
 [oracle@node1 ~]$ dbca -silent -createDatabase -responseFile /vagrant/dbca.rsp
@@ -215,7 +217,7 @@ DB‚ğì¬‚·‚éB
 Look at the log file "/u01/oracle/cfgtoollogs/dbca/orcl/orcl.log" for further details.
 ```
 
-Šm”F‚·‚éB
+ç¢ºèªã™ã‚‹ã€‚
 
 ```
 [oracle@node1 ~]$ /u01/11.2.0.4/grid/bin/crsctl stat res ora.orcl.db -t
@@ -229,7 +231,7 @@ ora.orcl.db
       2        ONLINE  ONLINE       node2                    Open
 ```
 
-Ú‘±ƒeƒXƒgB
+æ¥ç¶šãƒ†ã‚¹ãƒˆã€‚
 
 ```
 [oracle@node1 ~]$ sqlplus system/oracle@node2-vip:1521/orcl
@@ -256,9 +258,9 @@ With the Partitioning, Real Application Clusters and Automatic Storage Managemen
 
 ## FYI
 
-VirtualboxŠÂ‹«‚¾‚ÆVKTMƒoƒbƒNƒOƒ‰ƒEƒ“ƒhEƒvƒƒZƒX‚ª`gettimeofday()`‚ğ˜A”­‚µ‚Ä‚µ‚Ü‚¢A•½í‚Å‚àCPU•‰‰×‚ª‚“«‚·‚éB
-‚±‚ê‚ğ—}§‚·‚é‚É‚ÍˆÈ‰º‚ğÀs‚µ‚ÄƒŠƒu[ƒgB
-–{”ÔŠÂ‹«‚Å‚Íâ‘Î‚É‚â‚Á‚Ä‚Í‚¢‚¯‚È‚¢B
+Virtualboxç’°å¢ƒã ã¨VKTMãƒãƒƒã‚¯ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ãƒ»ãƒ—ãƒ­ã‚»ã‚¹ãŒ`gettimeofday()`ã‚’é€£ç™ºã—ã¦ã—ã¾ã„ã€å¹³å¸¸æ™‚ã§ã‚‚CPUè² è·ãŒé«˜é¨°ã™ã‚‹ã€‚
+ã“ã‚Œã‚’æŠ‘åˆ¶ã™ã‚‹ã«ã¯ä»¥ä¸‹ã‚’å®Ÿè¡Œã—ã¦ãƒªãƒ–ãƒ¼ãƒˆã€‚
+æœ¬ç•ªç’°å¢ƒã§ã¯çµ¶å¯¾ã«ã‚„ã£ã¦ã¯ã„ã‘ãªã„ã€‚
 
 ```
 (DB and ASM)
